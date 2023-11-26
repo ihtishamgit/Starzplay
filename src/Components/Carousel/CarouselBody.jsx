@@ -1,8 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CardImage from './CardImage'
+import CardImage from "./CardImage";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import {swiperBreakPoints} from '../../Common/MuiStyles/Styles'
+import { swiperBreakPoints } from "../../Common/MuiStyles/Styles";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,7 +12,9 @@ const CarouselBody = (props) => {
   return (
     <>
       <div className="d-flex flex-col banner-container">
-        <div className="d-flex banner-type">{props.title!=='Hero Banner'&&props.title}</div>
+        <div className="d-flex banner-type">
+          {props.title !== "Hero Banner" && props.title}
+        </div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           navigation
@@ -26,7 +28,7 @@ const CarouselBody = (props) => {
               <div className="d-flex">
                 <SwiperSlide>
                   {Object.keys(thumbnails).map((keyName) => (
-                    <CardImage thumbnails={thumbnails} keyName={keyName}/>
+                    <CardImage thumbnails={thumbnails} keyName={keyName} />
                   ))}
                 </SwiperSlide>
                 ...

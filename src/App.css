@@ -39,24 +39,24 @@
 .flex-col {
   flex-direction: column;
 }
-.justify-content-center{
+.justify-content-center {
   justify-content: center;
 }
-.justify-content-start{
+.justify-content-start {
   justify-content: start;
 }
-.align-items-start{
+.align-items-start {
   align-items: start;
 }
-.align-items-center{
+.align-items-center {
   align-items: center;
 }
-.banner-container{
-margin-bottom: 2rem;
+.banner-container {
+  margin-bottom: 2rem;
 }
-.banner-type{
+.banner-type {
   color: #ffffff;
 }
-.ml-4{
+.ml-4 {
   margin-left: 4%;
 }

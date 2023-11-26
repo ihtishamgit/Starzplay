@@ -1,61 +1,62 @@
-.footer-container{
-    width: 99%;
-    margin: auto;
-    padding: 1rem 0rem 1rem 0rem;
+.footer-container {
+  width: 99%;
+  margin: auto;
+  padding: 1rem 0rem 1rem 0rem;
 }
-.footer-container>*{
-    margin: 0.5rem 0rem 0.8rem 0rem;
-}
-
-.starplayz-offering-list{
-    display: flex;
-    list-style: none;
-    font-size: 0.7rem;
-    color: var(--white);
-    margin: 0;
-    padding: 0;
+.footer-container > * {
+  margin: 0.5rem 0rem 0.8rem 0rem;
 }
 
-.starplayz-offering-list>li{
-    border-right: 1px solid  var(--white);
-    padding: 0rem 0.7rem 0rem 0.7rem;
+.starplayz-offering-list {
+  display: flex;
+  list-style: none;
+  font-size: 0.7rem;
+  color: var(--white);
+  margin: 0;
+  padding: 0;
 }
 
-.copyright-container{
-    color: var(--lightgrey);
-    font-size: 0.7rem;
-    margin-left: 0.7rem;
+.starplayz-offering-list > li {
+  border-right: 1px solid var(--white);
+  padding: 0rem 0.7rem 0rem 0.7rem;
 }
-.media-container{
-    color: var(--white);
-    font-size: 1rem;
-    margin-left: 0.3rem
+
+.copyright-container {
+  color: var(--lightgrey);
+  font-size: 0.7rem;
+  margin-left: 0.7rem;
 }
-.media-container>*{
-    margin: 0rem 0.3rem;
+.media-container {
+  color: var(--white);
+  font-size: 1rem;
+  margin-left: 0.3rem;
 }
-.footer-btn{
-    background: var(--black);
-    border: 1.5px solid var(--white);
-    color: var(--white);
-    border-radius: 3px;
-    font-size: 0.5rem;
-    padding: 0.2rem 0.6rem;
+.media-container > * {
+  margin: 0rem 0.3rem;
 }
-.media-btn-text{
-    font-weight: 900;
+.footer-btn {
+  background: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+  border-radius: 3px;
+  font-size: 0.5rem;
+  padding: 0.2rem 0.6rem;
+}
+.media-btn-text {
+  font-weight: 900;
 }
 @media only screen and (max-width: 900px) {
-    .starplayz-offering-list{ 
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .media-container, .copyright-container{
-        justify-content: center !important;
-    }
-    .starplayz-offering-list>li{
-        border-right: none;
-        padding: 0rem;
-    }
+  .starplayz-offering-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .media-container,
+  .copyright-container {
+    justify-content: center !important;
+  }
+  .starplayz-offering-list > li {
+    border-right: none;
+    padding: 0rem;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CarouselBody from './CarouselBody'
+import CarouselBody from "./CarouselBody";
 import Data from "../../Utils/Data.json";
 
 const CarouselContainer = () => {
@@ -23,14 +23,11 @@ const CarouselContainer = () => {
               }
               key={carouselDetail.moduleId}
             >
-             
-                  <CarouselBody {...carouselDetail} />
-               
+              <CarouselBody {...carouselDetail} />
             </li>
           ))}
       </ul>
     </main>
-    
   );
 };
 export default CarouselContainer;
