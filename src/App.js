@@ -8,6 +8,7 @@ import "./App.css";
 const HomePage = lazy(() => import("./Components/Carousel/CarouselContainer"));
 function App() {
   const navigate = useNavigate();
+  console.log("kjhgfd");
   return (
     <>
       <Routes>
