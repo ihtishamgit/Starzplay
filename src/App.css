@@ -1,8 +1,11 @@
 .App {
   text-align: center;
   font-style: italic;
+  background-color: var(--black);
 }
-
+.main-container{
+  margin-top: 4rem;
+}
 .Nav_icons {
   font-size: 1.1rem;
   color: var(--lightgrey);

@@ -1,15 +1,56 @@
 /////////navbar styling components
+import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import { AppBar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { styled, createTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
+import { alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
 let commonCss = {
   cursor: "pointer",
   NavbarIconFontSize: "1.6rem",
   CopyrightIconFontSize: "0.8rem",
 };
+export const CustomInputStyle = () =>
+  styled(InputBase)(({ theme }) => ({
+    "label + &": {
+      marginTop: theme.spacing(3),
+    },
+    "& .MuiInputBase-input": {
+      borderRadius: 4,
+      position: "relative",
+      backgroundColor: theme.palette.mode === "light" ? "#F3F6F9" : "#1A2027",
+      border: "1px solid",
+      borderColor: theme.palette.mode === "light" ? "#E0E3E7" : "#2D3843",
+      fontSize: 16,
+      width: "100%",
+      padding: "10px 12px",
+      transition: theme.transitions.create([
+        "border-color",
+        "background-color",
+        "box-shadow",
+      ]),
+      // Use the system font instead of the default Roboto font.
+      fontFamily: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(","),
+      "&:focus": {
+        boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
+        borderColor: theme.palette.primary.main,
+      },
+    },
+  }));
 export const SearchIconWrapperStyle = () =>
   styled("div")(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -88,6 +129,8 @@ export const CustomSearchIconButton = styled(IconButton)({
 
 export const CustomIconButton = styled(IconButton)({
   "&.MuiButtonBase-root": {
+    padding: 6,
+    fontSize: "1rem",
     "&:focus": {
       outline: "none",
       border: "none",
@@ -106,7 +149,33 @@ export const CustomBootstrapButton = () =>
     backgroundColor: "#FF7F50",
     fontFamily: ["italic"].join(","),
   });
-
+export const customStyledMenu = () =>
+  styled((props) => (
+    <Menu
+      elevation={0}
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    "&.MuiPaper-root": {
+      "&.MuiMenuItem-root": {
+        "&:focus": {
+          outline: "none",
+          border: "none",
+        },
+        "&:active": {
+          backgroundColor: "transparent",
+        },
+      },
+    },
+  }));
 export const swiperBreakPoints = (props) => {
   return {
     640: {

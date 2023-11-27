@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "email": "ihtishamshami72@gmail.com",
+      "password": "$2a$10$qAvYswOZq0iESq/t7cwJFubU4JQBUTwv2AGdBJSECFMU4hTvR2oba",
+      "id": 1
+    },
+    {
+      "email": "sidra@yahoo.com",
+      "password": "$2a$10$A8k1RqQl5ZgdfVLBKbADD.FIKlyuAYn6xWwS.dP/9oRsfUzCRo8Qm",
+      "id": 2
+    },
+    {
+      "email": "zain@yahoo.com",
+      "password": "$2a$10$niOn8livqCiPJNAouxND0uDAmeQ4fBy9d8CtVkZTpfzWOHtUXH6Bq",
+      "id": 3
+    },
+    {
+      "email": "starzplay@hotmail.com",
+      "password": "$2a$10$OOhMFHNjNAdUBF95LOQxqe2CDR8e1SuH0/LS9KajJ5UDwyb9w3SJC",
+      "id": 4
+    }
+  ]
+}

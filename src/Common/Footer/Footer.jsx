@@ -6,10 +6,13 @@ import {
   InstagramICon,
   PinterestICon,
 } from "../../Common/Icons";
+import { reactLocalStorage } from "reactjs-localstorage";
 import "./Footer.css";
 const Footer = () => {
+  const auth = reactLocalStorage.getObject("token");
   return (
-    <footer className="footer-container">
+    <>
+   {auth?.accessToken && <footer className="footer-container">
       <ul className="starplayz-offering-list">
         <li>Why STARZPLAY?</li>
         <li>Help Center</li>
@@ -53,7 +56,8 @@ const Footer = () => {
           </div>{" "}
         </button>
       </div>
-    </footer>
+    </footer>}
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import SkeletonHome from "../../Common/Skeletons/SkeletonHome";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CardImage from "./CardImage";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -7,6 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { lazy, Suspense } from "react";
+const LazyCardImage = lazy(() => import("./CardImage"));
 
 const CarouselBody = (props) => {
   return (
@@ -28,7 +31,12 @@ const CarouselBody = (props) => {
               <div className="d-flex">
                 <SwiperSlide>
                   {Object.keys(thumbnails).map((keyName) => (
-                    <CardImage thumbnails={thumbnails} keyName={keyName} />
+                    <Suspense fallback={<SkeletonHome />}>
+                      <LazyCardImage
+                        thumbnails={thumbnails}
+                        keyName={keyName}
+                      />
+                    </Suspense>
                   ))}
                 </SwiperSlide>
                 ...
